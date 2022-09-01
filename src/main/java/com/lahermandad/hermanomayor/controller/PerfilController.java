@@ -27,8 +27,8 @@ public class PerfilController {
 		return perfilServiceTask.crear(perfilDto);
 	}
 	
-	@GetMapping("/perfilporid/{id}")
-	ResponseEntity<Object> consultarPerfil(@PathVariable(name = "id", required = true) Long id) {
+	@GetMapping("/perfil/{id}")
+	public PerfilDto consultarPerfil(@PathVariable(name = "id", required = true) Long id) {
 		return perfilServiceTask.consultar(id);
 	}
 	

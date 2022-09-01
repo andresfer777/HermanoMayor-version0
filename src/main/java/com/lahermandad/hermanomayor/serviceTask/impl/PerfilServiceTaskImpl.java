@@ -33,13 +33,8 @@ public class PerfilServiceTaskImpl implements PerfilServiceTask {
 	}
 	
 	@Override
-	public ResponseEntity<Object> consultar(Long id) throws DatoNoEncontradoException {
-		
-		PerfilDto perfilConsultado = perfilService.consultar(id);
-		if(ObjectUtils.isEmpty(perfilConsultado)) {
-			throw new DatoNoEncontradoException();
-		}
-		return ResponseHandler.generarRespuesta("¡Resultado obtenido!", HttpStatus.OK, perfilConsultado);
+	public PerfilDto consultar(Long id) throws DatoNoEncontradoException {
+		return perfilService.consultar(id);
 	}
 	
 	@Override
