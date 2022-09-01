@@ -51,6 +51,4 @@ public class PerfilServiceTaskImpl implements PerfilServiceTask {
 	public List<Perfil> listar(){
 		return perfilService.listar();
 	}
-	
-	//Comentario de prueba
 }
